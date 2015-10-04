@@ -1,5 +1,8 @@
 package com.lzc.base;
 
+import android.content.Context;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,8 +13,13 @@ import com.tencent.bugly.crashreport.CrashReport;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
 
-import io.rong.imkit.RongIM;
-import io.rong.imlib.RongIMClient;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.util.Enumeration;
+
+//import io.rong.imkit.RongIM;
+//import io.rong.imlib.RongIMClient;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +36,28 @@ public class MainActivity extends AppCompatActivity {
         PushAgent mPushAgent = PushAgent.getInstance(this.getBaseContext());
         mPushAgent.enable();
         PushAgent.getInstance(this.getBaseContext()).onAppStart();
+
+
+        //获取wifi服务
+        WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        //判断wifi是否开启
+        if (!wifiManager.isWifiEnabled()) {
+            String ip = getLocalIpAddress();
+            Log.i("GPRS ip",ip);
+        }else{
+            WifiInfo wifiInfo = wifiManager.getConnectionInfo();
+            int ipAddress = wifiInfo.getIpAddress();
+            String ip = intToIp(ipAddress);
+            Log.i("WIFI ip",ip);
+        }
+
+
+
+
+
+//        EditText et = (EditText)findViewById(R.id.EditText01);
+//        et.setText(ip);
+
 
         //容云
 //        String Token = "d6bCQsXiupB/4OyGkh+TOrI6ZiT8q7s0UEaMPWY0lMxmHdi1v/AAJxOma4aYXyaivfPIJjNHdE+FMH9kV/Jrxg==";//test
@@ -55,6 +85,40 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
     }
+
+    //返回ip地址
+    private String intToIp(int i) {
+
+        return (i & 0xFF ) + "." +
+                ((i >> 8 ) & 0xFF) + "." +
+                ((i >> 16 ) & 0xFF) + "." +
+                ( i >> 24 & 0xFF) ;
+    }
+    //GPRS返回ip地址
+    public String getLocalIpAddress()
+    {
+        try
+        {
+            for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();)
+            {
+                NetworkInterface intf = en.nextElement();
+                for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();)
+                {
+                    InetAddress inetAddress = enumIpAddr.nextElement();
+                    if (!inetAddress.isLoopbackAddress())
+                    {
+                        return inetAddress.getHostAddress().toString();
+                    }
+                }
+            }
+        }
+        catch (SocketException ex)
+        {
+//            Log.e("WifiPreference IpAddress", ex.toString());
+        }
+        return null;
+    }
+
 
 
     //Umeng统计

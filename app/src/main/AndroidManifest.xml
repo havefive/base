@@ -32,8 +32,7 @@
     <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
     <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-;
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -52,7 +51,6 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="hE81bHl4Oe1w16qwkPByNWL0" />
-       //key:开发者申请的key
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
@@ -195,15 +193,15 @@
             android:exported="false" />
 
         <!--容云-->
-        <activity android:name=".ConversationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+        <!--<activity android:name=".ConversationActivity">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.VIEW" />-->
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
 
-                <data android:host="com.lzc.base" android:pathPrefix="/conversation/" android:scheme="rong" />
-            </intent-filter>
-        </activity>
+                <!--<data android:host="com.lzc.base" android:pathPrefix="/conversation/" android:scheme="rong" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
 
     </application>
 
