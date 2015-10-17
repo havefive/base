@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
+import com.umeng.update.UmengUpdateAgent;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         PushAgent mPushAgent = PushAgent.getInstance(this.getBaseContext());
         mPushAgent.enable();
         PushAgent.getInstance(this.getBaseContext()).onAppStart();
+
+
+        UmengUpdateAgent.update(this);
 
 
         //获取wifi服务
