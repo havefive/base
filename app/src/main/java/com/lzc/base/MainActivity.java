@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.Toast;
 
+import com.pgyersdk.crash.PgyCrashManager;
+import com.pgyersdk.feedback.PgyFeedbackShakeManager;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
@@ -38,7 +40,10 @@ public class MainActivity extends AppCompatActivity {
         mPushAgent.enable();
         PushAgent.getInstance(this.getBaseContext()).onAppStart();
 
+        //蒲公英反馈sdk
+        PgyCrashManager.register(this);
 
+        //Umeng 更新sdk
         UmengUpdateAgent.update(this);
 
 
@@ -127,13 +132,14 @@ public class MainActivity extends AppCompatActivity {
 
     //Umeng统计
     public void onResume() {
+        PgyFeedbackShakeManager.register(MainActivity.this, false);
         super.onResume();
         MobclickAgent.onResume(this);
     }
+
     public void onPause() {
+        PgyFeedbackShakeManager.unregister();
         super.onPause();
         MobclickAgent.onPause(this);
     }
-
-
 }
