@@ -247,7 +247,8 @@
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait" />
         <activity android:name=".ui.FrescoActivity" />
-        <activity android:name=".ui.ButterknifeActivity"></activity>
+        <activity android:name=".ui.ButterknifeActivity" />
+        <activity android:name=".ui.SwipeActivity"></activity>
     </application>
 
 </manifest>
