@@ -7,11 +7,11 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
-import com.coolsla.lzc.R;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.lzc.base.R;
 
 public class SimpleCrypto extends Activity {
 	
@@ -94,7 +94,7 @@ public class SimpleCrypto extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.activity_bdlocation);
 		
 		String masterPassword = "a";
 		String originalText = "0123456789";
