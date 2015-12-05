@@ -1,4 +1,4 @@
-package com.lzc.base;
+package com.lzc.company;
 
 import org.junit.Test;
 

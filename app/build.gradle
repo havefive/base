@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.lzc.base"
+        applicationId "com.lzc.company"
         minSdkVersion 14
         targetSdkVersion 22
         versionCode 1
@@ -47,7 +47,7 @@ dependencies {
 
 //腾讯bugly
 bugly {
-    appId = '900010042'    //注册时分配的App ID
-    appKey = 'qhHEKfh1H3Ch4b0p'  //注册时分配的App Key
+    appId = '900014444'    //注册时分配的App ID
+    appKey = 'NNfwrAJuSvZN99pE'  //注册时分配的App Key
 }
 

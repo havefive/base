@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.lzc.base.ui.ButterknifeActivity">
+    tools:context="com.lzc.company.ui.ButterknifeActivity">
 
 
     <EditText

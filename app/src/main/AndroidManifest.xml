@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lzc.base">
+    package="com.lzc.company">
 
     <uses-sdk android:minSdkVersion="4" />
 
@@ -46,7 +46,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.AppStart">
+        <activity android:name="com.lzc.company.ui.AppStart">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -66,10 +66,10 @@
         <!-- Umeng -->
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="560d55b267e58e87f00061a6" />
+            android:value="5662efd167e58efdbe0013e6" />
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"
-            android:value="21e9107962d063ba8a85d71b680920df" />
+            android:value="b178c67419daf6412b9174b1d0fc712a" />
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="Channel ID" />
@@ -220,12 +220,12 @@
             android:name="com.umeng.update.UpdateDialogActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
-            android:name=".ui.LoginActivity"
+            android:name="com.lzc.company.ui.LoginActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.lzc.company.MainActivity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -239,16 +239,16 @@
         <!-- android:label="@string/title_activity_app_start" -->
         <!-- android:theme="@style/AppTheme.NoActionBar"></activity> -->
         <activity
-            android:name=".ui.CaptureActivity"
+            android:name="com.lzc.company.ui.CaptureActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.BdLocation"
+            android:name="com.lzc.company.ui.BdLocation"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.FrescoActivity" />
-        <activity android:name=".ui.ButterknifeActivity" />
-        <activity android:name=".ui.SwipeActivity"></activity>
+        <activity android:name="com.lzc.company.ui.FrescoActivity" />
+        <activity android:name="com.lzc.company.ui.ButterknifeActivity" />
+        <activity android:name="com.lzc.company.ui.SwipeActivity"></activity>
     </application>
 
 </manifest>
