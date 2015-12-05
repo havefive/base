@@ -79,7 +79,7 @@ public class AppStart extends Activity {
     private void redirectTo() {
 //        Intent uploadLog = new Intent(this, LogUploadService.class);
 //        startService(uploadLog);
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, SwipeActivity.class);
         startActivity(intent);
         finish();
     }
