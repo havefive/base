@@ -23,7 +23,7 @@ public class BdLocation extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_Bdlocation);
+        setContentView(R.layout.activity_bdlocation);
         
         locationInfoTextView = (TextView) this.findViewById(R.id.tv_loc_info);
         startButton = (Button) this.findViewById(R.id.btn_start);

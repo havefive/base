@@ -25,7 +25,6 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
@@ -222,9 +221,9 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name=".ui.LoginActivity"
-            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation"
-            android:label="@string/title_activity_login" />
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main2"
@@ -239,14 +238,15 @@
         <!-- android:name=".ui.AppStart" -->
         <!-- android:label="@string/title_activity_app_start" -->
         <!-- android:theme="@style/AppTheme.NoActionBar"></activity> -->
-        <activity android:name=".ui.CaptureActivity"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"></activity>
-
-        <activity android:name=".ui.BdLocation"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"></activity>
-
+        <activity
+            android:name=".ui.CaptureActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.BdLocation"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.FrescoActivity"></activity>
     </application>
 
 </manifest>
