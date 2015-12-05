@@ -96,7 +96,9 @@
     <orderEntry type="library" exported="" name="design-22.2.1" level="project" />
     <orderEntry type="library" exported="" name="fbcore-0.6.0" level="project" />
     <orderEntry type="library" exported="" name="drawee-0.6.0" level="project" />
+    <orderEntry type="library" exported="" name="butterknife-7.0.1" level="project" />
     <orderEntry type="library" exported="" name="library-1.0.0" level="project" />
+    <orderEntry type="library" exported="" name="okhttp-2.6.0" level="project" />
     <orderEntry type="library" exported="" name="library-1.2.0" level="project" />
     <orderEntry type="library" exported="" name="com.umeng.message.lib_v2.5.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-22.2.1" level="project" />
@@ -105,6 +107,7 @@
     <orderEntry type="library" exported="" name="dialogplus-1.10" level="project" />
     <orderEntry type="library" exported="" name="core-3.2.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.2.1" level="project" />
+    <orderEntry type="library" exported="" name="okio-1.6.0" level="project" />
     <orderEntry type="library" exported="" name="imagepipeline-0.6.0" level="project" />
     <orderEntry type="library" exported="" name="fresco-0.6.0" level="project" />
     <orderEntry type="library" exported="" name="crashreport-1.2.3.8" level="project" />

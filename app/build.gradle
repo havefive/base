@@ -39,6 +39,8 @@ dependencies {
     compile 'com.orhanobut:dialogplus:1.10@aar'
     compile "com.daimajia.swipelayout:library:1.2.0@aar"
     compile 'com.facebook.fresco:fresco:0.6.0+'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.squareup.okhttp:okhttp:2.6.0'
 }
 
 //腾讯bugly

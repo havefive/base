@@ -246,7 +246,8 @@
             android:name=".ui.BdLocation"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.FrescoActivity"></activity>
+        <activity android:name=".ui.FrescoActivity" />
+        <activity android:name=".ui.ButterknifeActivity"></activity>
     </application>
 
 </manifest>
