@@ -36,6 +36,8 @@ dependencies {
     compile 'me.imid.swipebacklayout.lib:library:1.0.0'
     compile files('libs/pgyer_sdk_2.2.2.jar')
     compile 'com.google.zxing:core:3.2.0'
+    compile 'com.orhanobut:dialogplus:1.10@aar'
+    compile "com.daimajia.swipelayout:library:1.2.0@aar"
 }
 
 //腾讯bugly
