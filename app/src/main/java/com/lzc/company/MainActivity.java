@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         //腾讯bug
         CrashReport.initCrashReport(this.getBaseContext(), "900014444", false);
         //测试bug
-        CrashReport.testJavaCrash();
+//        CrashReport.testJavaCrash();
 
         //推送通知umeng
         PushAgent mPushAgent = PushAgent.getInstance(this.getBaseContext());
