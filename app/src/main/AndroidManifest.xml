@@ -63,6 +63,15 @@
             android:enabled="true"
             android:process=":remote" />
 
+        <!--开机启动-->
+        <receiver android:enabled="true" android:name=".receiver.BootUpReceiver"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+
         <!-- Umeng -->
         <meta-data
             android:name="UMENG_APPKEY"
